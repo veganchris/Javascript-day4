@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+
+        }
+
+        #circle {
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            background: red;
+            vertical-align: bottom;
+        }
+
+        #message {
+            position: absolute;
+            top: 25px;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message"></div>
+    <div id="circle"></div>
+
+    <script>
+        let ball = document.getElementById("circle");
+        let msg = document.getElementById("message");
+
+        ball.addEventListener("click", () => {
+            ball.style.background = "grey";
+        })
+        ball.addEventListener("dblclick", () => {
+            ball.style.background = "blue";
+        })
+        ball.addEventListener("mouseover", () => {
+            msg.innerHTML = "you're in the circle";
+        })
+        ball.addEventListener("mouseout", () => {
+            msg.innerHTML = "you're out of the circle";
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            margin: 5px;
+            padding: 5px;
+            border: 3px solid;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="firstName" placeholder="enter firstname"><br>
+    <input type="text" id="lastName" placeholder="enter lastname"><br>
+    <input type="text" id="age" placeholder="enter age"><br>
+    <input type="submit" id="subm">
+    <br><br>
+    <div id="firstOut">Firstname: </div>
+    <div id="lastOut">Lastname: </div>
+    <div id="ageOut">Age: </div>
+
+    <script>
+        function evalForm() {
+            let fname = document.getElementById("firstOut");
+            let lname = document.getElementById("lastOut");
+            let aname = document.getElementById("ageOut");
+            let name = document.getElementById("firstName").value;
+            fname.innerHTML += name;
+            if (name.length > 5) {
+                fname.style.color = "green"
+            } else {
+                fname.style.color = "red"
+            }
+            name = document.getElementById("lastName").value;
+            lname.innerHTML += name;
+            if (name.length > 5) {
+                lname.style.color = "green"
+            } else {
+                lname.style.color = "red"
+            }
+            name = document.getElementById("age").value;
+            aname.innerHTML += name;
+        }
+        document.getElementById("subm").addEventListener("click", evalForm)
+    </script>
+</body>
+
+</html>
