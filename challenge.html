@@ -25,7 +25,7 @@
 
         button {
             border: 1px;
-            background-color: aqua;
+            background-color: blanchedalmond;
             border-radius: 25px;
             padding: 1% 5%;
             margin: 5% 0;
@@ -50,19 +50,18 @@
             align-items: center;
         }
 
-        .container div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        @media screen and (max-width: 520px) {
+         @media screen and (max-width: 520px) {
             .container {
-display
+                grid-template-columns: 1fr;
+
             }
 
             #dice2 {
+                display: flex;
+                order: 2;
+                justify-content: center;
             }
+
 
         }
     </style>
@@ -76,8 +75,8 @@ display
     <div class="container">
         <div id="dice1">0</div>
         <div id="dice2">0</div>
-        <div><button id="pl1Button">Press the button</button></div>
-        <div><button id="pl2Button">Press the button</button></div>
+        <div id="pb1"><button id="pl1Button">Press the button</button></div>
+        <div id="pb2"><button id="pl2Button">Press the button</button></div>
     </div>
     <!--     javascript start -->
     <script>
