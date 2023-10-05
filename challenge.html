@@ -21,6 +21,7 @@
             text-align: center;
             font-size: 60px;
             padding: 0.6em;
+            margin: auto;
         }
 
         button {
@@ -41,13 +42,19 @@
 
         h2 {
             color: black;
+            text-align: center;
         }
 
-        .container {
+        /* .container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             justify-content: center;
             align-items: center;
+        } */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
         }
 
          @media screen and (max-width: 520px) {
@@ -72,12 +79,23 @@
         <h1 id="headText">Player-1 vs Player-2</h1>
         <h2 id="winner">Let's start the game</h2>
     </header>
-    <div class="container">
+<!--     <div class="container">
         <div id="dice1">0</div>
         <div id="dice2">0</div>
         <div id="pb1"><button id="pl1Button">Press the button</button></div>
         <div id="pb2"><button id="pl2Button">Press the button</button></div>
+    </div> -->
+    <div class="container">
+        <div class="first-dice">
+            <div id="dice1">0</div>
+            <div id="pb1"><button id="pl1Button">Press the button</button></div>
+        </div>
+        <div class="second-dice">
+            <div id="dice2">0</div>
+            <div id="pb2"><button id="pl2Button">Press the button</button></div>
+        </div>
     </div>
+
     <!--     javascript start -->
     <script>
         let namePl1 = prompt("Please enter your name Player 1 (or 'exit')", "Player 1");
